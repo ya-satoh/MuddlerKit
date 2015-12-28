@@ -12,6 +12,11 @@
 		0EC9951B1C311D2F0035291D /* MuddlerKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9951A1C311D2F0035291D /* MuddlerKitTests.swift */; };
 		0EC9956E1C3128300035291D /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9956D1C3128300035291D /* UITableViewExtensions.swift */; };
 		0EC995701C3128650035291D /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9956F1C3128650035291D /* UICollectionViewExtensions.swift */; };
+		0EC995751C312BAD0035291D /* UIWebViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995741C312BAD0035291D /* UIWebViewExtensions.swift */; };
+		0EC995771C312C0B0035291D /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995761C312C0B0035291D /* UIApplicationExtensions.swift */; };
+		0EC995791C312CD20035291D /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995781C312CD20035291D /* UIAlertControllerExtensions.swift */; };
+		0EC9957B1C312D7B0035291D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9957A1C312D7B0035291D /* StringExtensions.swift */; };
+		0EC9957E1C312E070035291D /* NSHTTPCookieStorageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9957D1C312E070035291D /* NSHTTPCookieStorageExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +38,11 @@
 		0EC9951C1C311D2F0035291D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EC9956D1C3128300035291D /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		0EC9956F1C3128650035291D /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
+		0EC995741C312BAD0035291D /* UIWebViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWebViewExtensions.swift; sourceTree = "<group>"; };
+		0EC995761C312C0B0035291D /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
+		0EC995781C312CD20035291D /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
+		0EC9957A1C312D7B0035291D /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		0EC9957D1C312E070035291D /* NSHTTPCookieStorageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSHTTPCookieStorageExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,7 @@
 				0EC9950E1C311D2E0035291D /* MuddlerKit.h */,
 				0EC995101C311D2E0035291D /* Info.plist */,
 				0EC995711C31287A0035291D /* UIKit */,
+				0EC9957C1C312D840035291D /* Foundation */,
 			);
 			path = MuddlerKit;
 			sourceTree = "<group>";
@@ -96,8 +107,20 @@
 			children = (
 				0EC9956D1C3128300035291D /* UITableViewExtensions.swift */,
 				0EC9956F1C3128650035291D /* UICollectionViewExtensions.swift */,
+				0EC995741C312BAD0035291D /* UIWebViewExtensions.swift */,
+				0EC995761C312C0B0035291D /* UIApplicationExtensions.swift */,
+				0EC995781C312CD20035291D /* UIAlertControllerExtensions.swift */,
 			);
 			name = UIKit;
+			sourceTree = "<group>";
+		};
+		0EC9957C1C312D840035291D /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				0EC9957A1C312D7B0035291D /* StringExtensions.swift */,
+				0EC9957D1C312E070035291D /* NSHTTPCookieStorageExtensions.swift */,
+			);
+			name = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,8 +231,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC9957B1C312D7B0035291D /* StringExtensions.swift in Sources */,
+				0EC9957E1C312E070035291D /* NSHTTPCookieStorageExtensions.swift in Sources */,
 				0EC995701C3128650035291D /* UICollectionViewExtensions.swift in Sources */,
 				0EC9956E1C3128300035291D /* UITableViewExtensions.swift in Sources */,
+				0EC995791C312CD20035291D /* UIAlertControllerExtensions.swift in Sources */,
+				0EC995771C312C0B0035291D /* UIApplicationExtensions.swift in Sources */,
+				0EC995751C312BAD0035291D /* UIWebViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
