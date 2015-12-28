@@ -14,6 +14,7 @@
 		0EC995611C31235E0035291D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC9955F1C31235E0035291D /* LaunchScreen.storyboard */; };
 		0EC995691C3124FE0035291D /* MuddlerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC995681C3124FE0035291D /* MuddlerKit.framework */; };
 		0EC995731C3129E00035291D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995721C3129E00035291D /* Log.swift */; };
+		0EC995881C3133A10035291D /* ModalyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995871C3133A10035291D /* ModalyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0EC995621C31235E0035291D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EC995681C3124FE0035291D /* MuddlerKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MuddlerKit.framework; path = Carthage/Build/iOS/MuddlerKit.framework; sourceTree = "<group>"; };
 		0EC995721C3129E00035291D /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		0EC995871C3133A10035291D /* ModalyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				0EC995721C3129E00035291D /* Log.swift */,
 				0EC995561C31235E0035291D /* AppDelegate.swift */,
 				0EC995581C31235E0035291D /* ViewController.swift */,
+				0EC995871C3133A10035291D /* ModalyViewController.swift */,
 				0EC9955A1C31235E0035291D /* Main.storyboard */,
 				0EC9955D1C31235E0035291D /* Assets.xcassets */,
 				0EC9955F1C31235E0035291D /* LaunchScreen.storyboard */,
@@ -162,6 +165,7 @@
 			files = (
 				0EC995591C31235E0035291D /* ViewController.swift in Sources */,
 				0EC995571C31235E0035291D /* AppDelegate.swift in Sources */,
+				0EC995881C3133A10035291D /* ModalyViewController.swift in Sources */,
 				0EC995731C3129E00035291D /* Log.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +324,7 @@
 				0EC995671C31235E0035291D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
