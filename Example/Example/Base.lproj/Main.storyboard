@@ -86,7 +86,13 @@
                             <constraint firstItem="pfP-Hv-hm2" firstAttribute="centerY" secondItem="vHv-jd-3qK" secondAttribute="centerY" id="fUD-Km-S34"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2X4-bs-KSi"/>
+                    <navigationItem key="navigationItem" id="2X4-bs-KSi">
+                        <barButtonItem key="rightBarButtonItem" title="Root" id="cYL-rV-bH9">
+                            <connections>
+                                <action selector="tapBarItem:" destination="k9P-uM-zWt" id="WSb-LQ-lkZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnJ-gX-GEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
