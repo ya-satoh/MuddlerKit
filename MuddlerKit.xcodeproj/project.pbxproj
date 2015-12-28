@@ -20,6 +20,7 @@
 		0EC995801C312FC30035291D /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9957F1C312FC30035291D /* UIViewControllerExtensions.swift */; };
 		0EC995821C312FF70035291D /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995811C312FF70035291D /* UINavigationControllerExtensions.swift */; };
 		0EC995841C31301D0035291D /* UITabBarControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995831C31301D0035291D /* UITabBarControllerExtensions.swift */; };
+		0EC9958A1C313BBD0035291D /* DispatchExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995891C313BBD0035291D /* DispatchExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0EC9957F1C312FC30035291D /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0EC995811C312FF70035291D /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
 		0EC995831C31301D0035291D /* UITabBarControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabBarControllerExtensions.swift; sourceTree = "<group>"; };
+		0EC995891C313BBD0035291D /* DispatchExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				0EC995101C311D2E0035291D /* Info.plist */,
 				0EC995711C31287A0035291D /* UIKit */,
 				0EC9957C1C312D840035291D /* Foundation */,
+				0EC995891C313BBD0035291D /* DispatchExtensions.swift */,
 			);
 			path = MuddlerKit;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			files = (
 				0EC995801C312FC30035291D /* UIViewControllerExtensions.swift in Sources */,
 				0EC9957B1C312D7B0035291D /* StringExtensions.swift in Sources */,
+				0EC9958A1C313BBD0035291D /* DispatchExtensions.swift in Sources */,
 				0EC9957E1C312E070035291D /* NSHTTPCookieStorageExtensions.swift in Sources */,
 				0EC995841C31301D0035291D /* UITabBarControllerExtensions.swift in Sources */,
 				0EC995701C3128650035291D /* UICollectionViewExtensions.swift in Sources */,
