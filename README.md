@@ -8,8 +8,10 @@ A Cocoa framework extensions written by Swift
 
 ## Requirements
 
-* Xcode 7.2
-* Swift 2.1.1
+* Xcode 8
+* Swift 2.3
+
+If you use Xcode 7 and Swift 2.2, try 0.0.3
 
 ## Carthage
 
