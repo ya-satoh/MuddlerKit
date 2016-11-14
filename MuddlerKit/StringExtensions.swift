@@ -13,7 +13,7 @@ extension String {
     public init?(deviceToken: NSData) {
         let tokenChars = UnsafePointer<CChar>(deviceToken.bytes)
         var tokenString = ""
-        for var i = 0; i < deviceToken.length; i++ {
+        (0..<deviceToken.length).indices.forEach { (i) in
             tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])
         }
         self = tokenString
