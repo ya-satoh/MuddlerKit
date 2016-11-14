@@ -10,10 +10,10 @@ import Foundation
 
 extension String {
     // http://stackoverflow.com/a/24979960
-    public init?(deviceToken: NSData) {
-        let tokenChars = UnsafePointer<CChar>(deviceToken.bytes)
+    public init?(deviceToken: Data) {
+        let tokenChars = (deviceToken as NSData).bytes.bindMemory(to: CChar.self, capacity: deviceToken.count)
         var tokenString = ""
-        (0..<deviceToken.length).indices.forEach { (i) in
+        (0..<deviceToken.count).indices.forEach { (i) in
             tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])
         }
         self = tokenString

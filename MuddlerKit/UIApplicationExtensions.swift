@@ -10,20 +10,20 @@ import UIKit
 
 extension UIApplication {
     public func activateUserNotificationSettings() {
-        let types: UIUserNotificationType = [.Badge, .Alert, .Sound]
-        let settings = UIUserNotificationSettings(forTypes: types, categories: nil)
+        let types: UIUserNotificationType = [.badge, .alert, .sound]
+        let settings = UIUserNotificationSettings(types: types, categories: nil)
         self.registerUserNotificationSettings(settings)
     }
 
     public func isEnableRemoteNotifications() -> Bool {
-        guard self.isRegisteredForRemoteNotifications() else { return false }
-        guard let settings = self.currentUserNotificationSettings() else { return false }
-        return settings.types != .None
+        guard self.isRegisteredForRemoteNotifications else { return false }
+        guard let settings = self.currentUserNotificationSettings else { return false }
+        return settings.types != UIUserNotificationType()
     }
 
-    public func applicationIconBadgeNumberSafely(badgeNumber: Int) {
-        guard let settings = currentUserNotificationSettings() else { return }
-        if settings.types.contains(.Badge) {
+    public func applicationIconBadgeNumberSafely(_ badgeNumber: Int) {
+        guard let settings = currentUserNotificationSettings else { return }
+        if settings.types.contains(.badge) {
             applicationIconBadgeNumber = badgeNumber
         }
     }
