@@ -8,14 +8,15 @@ A Cocoa framework extensions written by Swift
 
 ## Requirements
 
-* Xcode 8
-* Swift 2.3
+* Xcode 8.1
+* Swift 3
 
-If you use Xcode 7 and Swift 2.2, try 0.0.3
+If you use Xcode 7 and Swift 2.2, try 0.0.3.  
+If you use Xcode 8 and Swift 2.3, try 0.0.4.
 
 ## Carthage
 
-* carthage 0.11.0
+* carthage 0.17.2
 
 Add `github "matsuda/MuddlerKit"` to your Cartfile
 
