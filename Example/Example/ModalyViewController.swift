@@ -32,18 +32,18 @@ class ModalyViewController: UIViewController {
     }
     */
 
-    @IBAction func tapBarItem(sender: AnyObject) {
-        if let delegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+    @IBAction func tapBarItem(_ sender: AnyObject) {
+        if let delegate = UIApplication.shared.delegate as? AppDelegate {
             delegate.initialSetup()
         }
     }
 
-    @IBAction func tapButton(sender: AnyObject) {
+    @IBAction func tapButton(_ sender: AnyObject) {
         let time = 1.0
         dispatch_async_main_after_time(time) {
             let alert = UIAlertController.alertController(title: "Dispatch", message: "dispatch_async_main_after_time : (\(time))")
-            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }

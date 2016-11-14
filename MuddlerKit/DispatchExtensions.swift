@@ -10,15 +10,14 @@ import Foundation
 
 /// MARK: GCD shorthand
 
-public func dispatch_async_main_safely(block: () -> Void) {
-    if NSThread.isMainThread() {
+public func dispatch_async_main_safely(_ block: @escaping () -> Void) {
+    if Thread.isMainThread {
         block()
     } else {
-        dispatch_async(dispatch_get_main_queue(), block)
+        DispatchQueue.main.async(execute: block)
     }
 }
 
-public func dispatch_async_main_after_time(time: Double, block: () -> Void) {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC))),
-        dispatch_get_main_queue(), block)
+public func dispatch_async_main_after_time(_ time: Double, block: @escaping () -> Void) {
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(time * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: block)
 }

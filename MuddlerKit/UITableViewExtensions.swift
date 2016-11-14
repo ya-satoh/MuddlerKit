@@ -11,7 +11,7 @@ import UIKit
 extension UITableView {
     public func deselectRow() {
         if let indexPath = self.indexPathForSelectedRow {
-            self.deselectRowAtIndexPath(indexPath, animated: true)
+            self.deselectRow(at: indexPath, animated: true)
         }
     }
 }

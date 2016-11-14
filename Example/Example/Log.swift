@@ -8,11 +8,11 @@
 
 import Foundation
 
-public func Log(body: Any? = nil, function: String = #function, file: String = #file, line: Int = #line) {
-    Log(body == nil ? "" : body, function: function, file: file, line: line)
+public func Log(_ body: Any? = nil, function: String = #function, file: String = #file, line: Int = #line) {
+    Log(body == nil ? "" : body!, function: function, file: file, line: line)
 }
 
-public func Log(@autoclosure body: () -> Any, function: String = #function, file: String = #file, line: Int = #line) {
+public func Log(_ body: @autoclosure () -> Any, function: String = #function, file: String = #file, line: Int = #line) {
 #if DEBUG
     print("[\((file as NSString).lastPathComponent):\(line)] <\(function)> \(body())")
 #endif

@@ -19,7 +19,7 @@ extension UIViewController {
 
     public func peelViewController() {
         let presenting = self.presentingViewController
-        self.dismissViewControllerAnimated(false) {
+        self.dismiss(animated: false) {
             presenting?.peelViewController()
         }
     }
@@ -27,7 +27,7 @@ extension UIViewController {
     public func setExclusiveTouchToBarButtonItems() {
         var c: UIViewController? = self
         while c != nil && !(c is UINavigationController) {
-            c = c?.parentViewController
+            c = c?.parent
         }
         c?.setExclusiveTouchToBarButtonItems()
     }

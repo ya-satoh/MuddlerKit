@@ -8,15 +8,15 @@
 
 import Foundation
 
-extension NSHTTPCookieStorage {
-    public func archivedData() -> NSData? {
+extension HTTPCookieStorage {
+    public func archivedData() -> Data? {
         guard let cookies = self.cookies else { return nil }
-        return NSKeyedArchiver.archivedDataWithRootObject(cookies)
+        return NSKeyedArchiver.archivedData(withRootObject: cookies)
     }
 
-    public func unarchiveWithData(data: NSData?) {
+    public func unarchiveWithData(_ data: Data?) {
         guard let d = data else { return }
-        guard let cookies = NSKeyedUnarchiver.unarchiveObjectWithData(d) as? [NSHTTPCookie] else {
+        guard let cookies = NSKeyedUnarchiver.unarchiveObject(with: d) as? [HTTPCookie] else {
             return
         }
         cookies.forEach { setCookie($0) }
@@ -27,12 +27,12 @@ extension NSHTTPCookieStorage {
         clear(cookies)
     }
 
-    func clearForURL(url: NSURL) {
-        guard let cookies = self.cookiesForURL(url) else { return }
+    func clearForURL(_ url: URL) {
+        guard let cookies = self.cookies(for: url) else { return }
         clear(cookies)
     }
 
-    public func clear(cookies: [NSHTTPCookie]) {
+    public func clear(_ cookies: [HTTPCookie]) {
         for cookie in cookies {
             clean(cookie)
         }
@@ -41,64 +41,64 @@ extension NSHTTPCookieStorage {
     /*
      * http://mmasashi.hatenablog.com/entry/20101202/1292763345
      */
-    public func clean(cookie: NSHTTPCookie) {
+    public func clean(_ cookie: HTTPCookie) {
         guard var property = cookie.properties else {
             deleteCookie(cookie)
             return
         }
         deleteCookie(cookie)
-        property[NSHTTPCookieExpires] = NSDate(timeIntervalSinceNow: -3600)
-        if let newCookie = NSHTTPCookie(properties: property) {
+        property[HTTPCookiePropertyKey.expires] = Date(timeIntervalSinceNow: -3600)
+        if let newCookie = HTTPCookie(properties: property) {
             setCookie(newCookie)
         }
     }
 
-    public class func archivedData() -> NSData? {
-        return sharedHTTPCookieStorage().archivedData()
+    public class func archivedData() -> Data? {
+        return shared.archivedData()
     }
 
-    public class func unarchiveWithData(data: NSData?) {
-        sharedHTTPCookieStorage().unarchiveWithData(data)
+    public class func unarchiveWithData(_ data: Data?) {
+        shared.unarchiveWithData(data)
     }
 
     public class func clearAll() {
-        sharedHTTPCookieStorage().clearAll()
+        shared.clearAll()
     }
 
-    public class func clearForURL(url: NSURL) {
-        sharedHTTPCookieStorage().clearForURL(url)
+    public class func clearForURL(_ url: URL) {
+        shared.clearForURL(url)
     }
 
-    public class func clear(cookies: [NSHTTPCookie]) {
-        sharedHTTPCookieStorage().clear(cookies)
+    public class func clear(_ cookies: [HTTPCookie]) {
+        shared.clear(cookies)
     }
 
-    public class func clean(cookie: NSHTTPCookie) {
-        sharedHTTPCookieStorage().clean(cookie)
+    public class func clean(_ cookie: HTTPCookie) {
+        shared.clean(cookie)
     }
 }
 
 //
 // MARK: - NSUserDefaults
 //
-extension NSHTTPCookieStorage {
-    public func saveToUserDefaultsForKey(key: String) -> Bool {
-        let ud = NSUserDefaults.standardUserDefaults()
-        ud.setObject(archivedData(), forKey: key)
+extension HTTPCookieStorage {
+    public func saveToUserDefaultsForKey(_ key: String) -> Bool {
+        let ud = UserDefaults.standard
+        ud.set(archivedData(), forKey: key)
         return ud.synchronize()
     }
 
-    public func loadFromUserDefaultsForKey(key: String) {
-        let ud = NSUserDefaults.standardUserDefaults()
-        guard let data = ud.dataForKey(key) else { return }
+    public func loadFromUserDefaultsForKey(_ key: String) {
+        let ud = UserDefaults.standard
+        guard let data = ud.data(forKey: key) else { return }
         unarchiveWithData(data)
     }
 
-    public class func saveToUserDefaultsForKey(key: String) -> Bool {
-        return sharedHTTPCookieStorage().saveToUserDefaultsForKey(key)
+    public class func saveToUserDefaultsForKey(_ key: String) -> Bool {
+        return shared.saveToUserDefaultsForKey(key)
     }
 
-    public class func loadFromUserDefaultsForKey(key: String) {
-        sharedHTTPCookieStorage().loadFromUserDefaultsForKey(key)
+    public class func loadFromUserDefaultsForKey(_ key: String) {
+        shared.loadFromUserDefaultsForKey(key)
     }
 }
