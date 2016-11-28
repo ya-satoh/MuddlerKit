@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E2E99BF1DEBB75800CC6EAE /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E99BE1DEBB75800CC6EAE /* NibLoadable.swift */; };
 		0EC9950F1C311D2E0035291D /* MuddlerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EC9950E1C311D2E0035291D /* MuddlerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EC995161C311D2F0035291D /* MuddlerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC9950B1C311D2E0035291D /* MuddlerKit.framework */; };
 		0EC9951B1C311D2F0035291D /* MuddlerKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9951A1C311D2F0035291D /* MuddlerKitTests.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E2E99BE1DEBB75800CC6EAE /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		0EC9950B1C311D2E0035291D /* MuddlerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MuddlerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC9950E1C311D2E0035291D /* MuddlerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuddlerKit.h; sourceTree = "<group>"; };
 		0EC995101C311D2E0035291D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				0EC9957F1C312FC30035291D /* UIViewControllerExtensions.swift */,
 				0EC995811C312FF70035291D /* UINavigationControllerExtensions.swift */,
 				0EC995831C31301D0035291D /* UITabBarControllerExtensions.swift */,
+				0E2E99BE1DEBB75800CC6EAE /* NibLoadable.swift */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				0EC995821C312FF70035291D /* UINavigationControllerExtensions.swift in Sources */,
 				0EC9956E1C3128300035291D /* UITableViewExtensions.swift in Sources */,
 				0EC995791C312CD20035291D /* UIAlertControllerExtensions.swift in Sources */,
+				0E2E99BF1DEBB75800CC6EAE /* NibLoadable.swift in Sources */,
 				0EC995771C312C0B0035291D /* UIApplicationExtensions.swift in Sources */,
 				0EC995751C312BAD0035291D /* UIWebViewExtensions.swift in Sources */,
 			);
