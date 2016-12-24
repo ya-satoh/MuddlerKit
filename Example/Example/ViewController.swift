@@ -24,6 +24,11 @@ class ViewController: UIViewController {
         self.tableView.deselectRow()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.sizeToFitFooterView()
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
