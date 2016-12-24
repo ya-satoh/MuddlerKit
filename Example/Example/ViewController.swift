@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        prepareTableView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -28,7 +29,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    private func prepareTableView() {
+        tableView.registerNib(SampleCell.self)
+    }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -37,8 +40,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = "Cell : \(indexPath.row)"
+        let cell = tableView.dequeueReusableCell(SampleCell.self, for: indexPath)
+        cell.label.text = "Cell : \(indexPath.row)"
         return cell
     }
 
