@@ -33,7 +33,7 @@ public extension NibLoadable {
 ///
 /// 1. File's Owner connect this view class
 /// 2. root view outlet contentView property
-/// 3. call loadContentView()
+/// 3. call loadContentViewFromNib()
 ///    generally will be called in init(frame:), init?(coder:)
 ///
 public protocol NibLoadableView: NibLoadable {
