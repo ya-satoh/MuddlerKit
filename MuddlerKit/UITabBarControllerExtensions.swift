@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UITabBarController {
-    public override func peelViewController() {
+public extension UITabBarController {
+    override func peelViewController() {
         if let cs = self.viewControllers {
             for c in cs {
                 if c == self.selectedViewController {

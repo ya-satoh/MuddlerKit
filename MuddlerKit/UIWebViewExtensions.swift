@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIWebView {
-    public func userAgent() -> String {
+public extension UIWebView {
+    func userAgent() -> String {
         return self.stringByEvaluatingJavaScript(from: "navigator.userAgent")!
     }
 }
