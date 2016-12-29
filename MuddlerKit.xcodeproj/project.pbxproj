@@ -26,6 +26,7 @@
 		0ED0B6A41E14F2E500BE2D48 /* PreferredScaleFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B6A31E14F2E500BE2D48 /* PreferredScaleFit.swift */; };
 		0ED0B6A81E14FA1100BE2D48 /* UIViewExtensiont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B6A71E14FA1100BE2D48 /* UIViewExtensiont.swift */; };
 		0ED0B6AB1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B6AA1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift */; };
+		0ED0B6AE1E15021F00BE2D48 /* CoreExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B6AD1E15021F00BE2D48 /* CoreExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		0ED0B6A31E14F2E500BE2D48 /* PreferredScaleFit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferredScaleFit.swift; sourceTree = "<group>"; };
 		0ED0B6A71E14FA1100BE2D48 /* UIViewExtensiont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensiont.swift; sourceTree = "<group>"; };
 		0ED0B6AA1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
+		0ED0B6AD1E15021F00BE2D48 /* CoreExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				0EC9957A1C312D7B0035291D /* StringExtensions.swift */,
 				0EC9957D1C312E070035291D /* NSHTTPCookieStorageExtensions.swift */,
+				0ED0B6AD1E15021F00BE2D48 /* CoreExtensions.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED0B6AE1E15021F00BE2D48 /* CoreExtensions.swift in Sources */,
 				0ED0B6A81E14FA1100BE2D48 /* UIViewExtensiont.swift in Sources */,
 				0EC995801C312FC30035291D /* UIViewControllerExtensions.swift in Sources */,
 				0EC9957B1C312D7B0035291D /* StringExtensions.swift in Sources */,
