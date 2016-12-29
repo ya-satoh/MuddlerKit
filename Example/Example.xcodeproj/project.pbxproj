@@ -14,12 +14,13 @@
 		0E8F75EE1E0E0C2C00D027AB /* SampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F75EC1E0E0C2C00D027AB /* SampleCell.swift */; };
 		0E8F75EF1E0E0C2C00D027AB /* SampleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F75ED1E0E0C2C00D027AB /* SampleCell.xib */; };
 		0EC995571C31235E0035291D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995561C31235E0035291D /* AppDelegate.swift */; };
-		0EC995591C31235E0035291D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995581C31235E0035291D /* ViewController.swift */; };
 		0EC9955C1C31235E0035291D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC9955A1C31235E0035291D /* Main.storyboard */; };
 		0EC9955E1C31235E0035291D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC9955D1C31235E0035291D /* Assets.xcassets */; };
 		0EC995611C31235E0035291D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC9955F1C31235E0035291D /* LaunchScreen.storyboard */; };
 		0EC995731C3129E00035291D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995721C3129E00035291D /* Log.swift */; };
-		0EC995881C3133A10035291D /* ModalyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995871C3133A10035291D /* ModalyViewController.swift */; };
+		0ED0B69E1E14F18B00BE2D48 /* MultipleTablesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B69C1E14F18B00BE2D48 /* MultipleTablesController.swift */; };
+		0ED0B69F1E14F18B00BE2D48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B69D1E14F18B00BE2D48 /* ViewController.swift */; };
+		0ED0B6A11E14F1DF00BE2D48 /* ModalyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B6A01E14F1DF00BE2D48 /* ModalyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,13 +69,14 @@
 		0E8F75ED1E0E0C2C00D027AB /* SampleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SampleCell.xib; path = Views/SampleCell.xib; sourceTree = "<group>"; };
 		0EC995531C31235E0035291D /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC995561C31235E0035291D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0EC995581C31235E0035291D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0EC9955B1C31235E0035291D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EC9955D1C31235E0035291D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EC995601C31235E0035291D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EC995621C31235E0035291D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EC995721C3129E00035291D /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		0EC995871C3133A10035291D /* ModalyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalyViewController.swift; sourceTree = "<group>"; };
+		0ED0B69C1E14F18B00BE2D48 /* MultipleTablesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleTablesController.swift; sourceTree = "<group>"; };
+		0ED0B69D1E14F18B00BE2D48 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0ED0B6A01E14F1DF00BE2D48 /* ModalyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,15 +133,24 @@
 			children = (
 				0EC995721C3129E00035291D /* Log.swift */,
 				0EC995561C31235E0035291D /* AppDelegate.swift */,
-				0EC995581C31235E0035291D /* ViewController.swift */,
-				0EC995871C3133A10035291D /* ModalyViewController.swift */,
 				0EC9955A1C31235E0035291D /* Main.storyboard */,
 				0EC9955D1C31235E0035291D /* Assets.xcassets */,
 				0EC9955F1C31235E0035291D /* LaunchScreen.storyboard */,
 				0EC995621C31235E0035291D /* Info.plist */,
+				0ED0B69B1E14F15400BE2D48 /* Controllers */,
 				0E8F75F01E0E0C4600D027AB /* Views */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		0ED0B69B1E14F15400BE2D48 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0ED0B69D1E14F18B00BE2D48 /* ViewController.swift */,
+				0ED0B6A01E14F1DF00BE2D48 /* ModalyViewController.swift */,
+				0ED0B69C1E14F18B00BE2D48 /* MultipleTablesController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,12 +252,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EC995591C31235E0035291D /* ViewController.swift in Sources */,
+				0ED0B69F1E14F18B00BE2D48 /* ViewController.swift in Sources */,
 				0EC995571C31235E0035291D /* AppDelegate.swift in Sources */,
+				0ED0B69E1E14F18B00BE2D48 /* MultipleTablesController.swift in Sources */,
 				0E8F75EE1E0E0C2C00D027AB /* SampleCell.swift in Sources */,
 				0E119BC91E0E0E68004818B5 /* SampleLoadableView.swift in Sources */,
-				0EC995881C3133A10035291D /* ModalyViewController.swift in Sources */,
 				0EC995731C3129E00035291D /* Log.swift in Sources */,
+				0ED0B6A11E14F1DF00BE2D48 /* ModalyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

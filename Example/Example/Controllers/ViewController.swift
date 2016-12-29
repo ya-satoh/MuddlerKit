@@ -9,9 +9,10 @@
 import UIKit
 import MuddlerKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet fileprivate private(set) weak var tableView: UITableView!
+    var dataSource: [Menu] = Menu.all()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,16 +42,39 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return dataSource.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(SampleCell.self, for: indexPath)
-        cell.label.text = "Cell : \(indexPath.row)"
+        cell.label.text = dataSource[indexPath.row].name
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ShowDetail", sender: indexPath)
+        switch dataSource[indexPath.row] {
+        case .adjustsScrollView:
+            performSegue(withIdentifier: "ShowAdjustScrollView", sender: indexPath)
+        default:
+            performSegue(withIdentifier: "ShowDetail", sender: indexPath)
+        }
+    }
+}
+
+enum Menu {
+    case adjustsScrollView
+    case other
+
+    var name: String {
+        switch self {
+        case .adjustsScrollView:
+            return "UIViewController#manuallyAdjustsScrollViewInsetsAndOffset"
+        case .other:
+            return "other"
+        }
+    }
+
+    static func all() -> [Menu] {
+        return [.adjustsScrollView]
     }
 }

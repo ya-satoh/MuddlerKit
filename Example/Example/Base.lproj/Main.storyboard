@@ -63,6 +63,7 @@
                     <connections>
                         <outlet property="tableView" destination="PSk-cO-Rlr" id="GCy-Yy-iBg"/>
                         <segue destination="EGL-q3-ECg" kind="show" identifier="ShowDetail" id="yR5-tw-PCS"/>
+                        <segue destination="Fth-rM-TbI" kind="show" identifier="ShowAdjustScrollView" id="pwi-FO-6BA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -124,6 +125,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pU5-vc-QNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1780" y="474"/>
+        </scene>
+        <!--Multiple Tables Controller-->
+        <scene sceneID="eaP-Iv-x3s">
+            <objects>
+                <viewController id="Fth-rM-TbI" customClass="MultipleTablesController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iZT-Sa-mIk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nx8-0J-d3z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1U8-ee-GIv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N8W-c1-ApX">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2aY-N6-Ax9"/>
+                                </constraints>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Fth-rM-TbI" id="nW4-dG-xWE"/>
+                                    <outlet property="delegate" destination="Fth-rM-TbI" id="gBF-OS-dda"/>
+                                </connections>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oFG-or-kCG">
+                                <rect key="frame" x="100" y="0.0" width="275" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Fth-rM-TbI" id="hp6-cy-yBo"/>
+                                    <outlet property="delegate" destination="Fth-rM-TbI" id="PQk-Uv-Tfr"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oFG-or-kCG" secondAttribute="trailing" id="5g3-ac-JBZ"/>
+                            <constraint firstItem="oFG-or-kCG" firstAttribute="top" secondItem="1U8-ee-GIv" secondAttribute="top" id="6es-ka-wzv"/>
+                            <constraint firstItem="N8W-c1-ApX" firstAttribute="leading" secondItem="1U8-ee-GIv" secondAttribute="leading" id="8nA-fN-wxq"/>
+                            <constraint firstItem="N8W-c1-ApX" firstAttribute="top" secondItem="1U8-ee-GIv" secondAttribute="top" id="Br2-9n-DaR"/>
+                            <constraint firstItem="oFG-or-kCG" firstAttribute="leading" secondItem="N8W-c1-ApX" secondAttribute="trailing" id="Vvy-Ft-LbJ"/>
+                            <constraint firstAttribute="bottom" secondItem="oFG-or-kCG" secondAttribute="bottom" id="aTM-tp-SWS"/>
+                            <constraint firstAttribute="bottom" secondItem="N8W-c1-ApX" secondAttribute="bottom" id="pFd-0X-0zW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView1" destination="N8W-c1-ApX" id="9H9-xF-iHp"/>
+                        <outlet property="tableView2" destination="oFG-or-kCG" id="4DS-ve-zBS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5p-rb-Z2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="1231.9340329835084"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="S2X-Yh-iw1">
