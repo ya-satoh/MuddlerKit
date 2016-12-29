@@ -25,6 +25,7 @@
 		0EC9958A1C313BBD0035291D /* DispatchExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995891C313BBD0035291D /* DispatchExtensions.swift */; };
 		0ED0B6A41E14F2E500BE2D48 /* PreferredScaleFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B6A31E14F2E500BE2D48 /* PreferredScaleFit.swift */; };
 		0ED0B6A81E14FA1100BE2D48 /* UIViewExtensiont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B6A71E14FA1100BE2D48 /* UIViewExtensiont.swift */; };
+		0ED0B6AB1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B6AA1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		0EC995891C313BBD0035291D /* DispatchExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchExtensions.swift; sourceTree = "<group>"; };
 		0ED0B6A31E14F2E500BE2D48 /* PreferredScaleFit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferredScaleFit.swift; sourceTree = "<group>"; };
 		0ED0B6A71E14FA1100BE2D48 /* UIViewExtensiont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensiont.swift; sourceTree = "<group>"; };
+		0ED0B6AA1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				0EC995761C312C0B0035291D /* UIApplicationExtensions.swift */,
 				0EC995781C312CD20035291D /* UIAlertControllerExtensions.swift */,
 				0EC9957F1C312FC30035291D /* UIViewControllerExtensions.swift */,
+				0ED0B6AA1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift */,
 				0EC995811C312FF70035291D /* UINavigationControllerExtensions.swift */,
 				0EC995831C31301D0035291D /* UITabBarControllerExtensions.swift */,
 				0E2E99BE1DEBB75800CC6EAE /* NibLoadable.swift */,
@@ -260,6 +263,7 @@
 				0ED0B6A81E14FA1100BE2D48 /* UIViewExtensiont.swift in Sources */,
 				0EC995801C312FC30035291D /* UIViewControllerExtensions.swift in Sources */,
 				0EC9957B1C312D7B0035291D /* StringExtensions.swift in Sources */,
+				0ED0B6AB1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift in Sources */,
 				0EC9958A1C313BBD0035291D /* DispatchExtensions.swift in Sources */,
 				0EC9957E1C312E070035291D /* NSHTTPCookieStorageExtensions.swift in Sources */,
 				0ED0B6A41E14F2E500BE2D48 /* PreferredScaleFit.swift in Sources */,
