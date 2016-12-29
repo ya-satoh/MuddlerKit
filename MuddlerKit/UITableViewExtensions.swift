@@ -31,6 +31,7 @@ public extension UITableView {
 
     private func sizeToSystemLayoutFitView(_ view: UIView) {
         view.setNeedsLayout()
+        view.layoutIfNeeded()
         let size = view.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
         var frame = view.frame
         frame.size.height = size.height

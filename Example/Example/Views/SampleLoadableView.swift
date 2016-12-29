@@ -27,6 +27,9 @@ final class SampleLoadableView: UIView, NibLoadableView {
     private func initialize() {
         loadContentViewFromNib()
         contentView.backgroundColor = UIColor.orange
-        label.text = "This view conforms NibLoadableView."
+        label.numberOfLines = 0
+        label.lineBreakMode = .byCharWrapping
+        label.text = "This view conforms NibLoadableView.\n"
+            + "and invoked UITableView#sizeToFitFooterView"
     }
 }
