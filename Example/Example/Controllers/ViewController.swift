@@ -37,6 +37,8 @@ final class ViewController: UIViewController {
 
     private func prepareTableView() {
         tableView.registerNib(SampleCell.self)
+        tableView.estimatedRowHeight = 44
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 }
 
