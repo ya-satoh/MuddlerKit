@@ -50,3 +50,17 @@ extension UIAlertController {
         controller.present(self, animated: animated, completion: completion)
     }
 }
+
+
+///
+/// MARK: - UIAlertAction
+///
+public extension UIAlertAction {
+    class func ok(handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
+        return UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .default, handler: handler)
+    }
+
+    class func cancel(handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
+        return UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel"), style: .cancel, handler: handler)
+    }
+}
