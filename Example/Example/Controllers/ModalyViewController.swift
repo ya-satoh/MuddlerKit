@@ -39,11 +39,6 @@ class ModalyViewController: UIViewController {
     }
 
     @IBAction func tapButton(_ sender: AnyObject) {
-        let time = 1.0
-        dispatch_async_main_after_time(time) {
-            let alert = UIAlertController.alertController(title: "Dispatch", message: "dispatch_async_main_after_time : (\(time))")
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
+        print("remove `dispatch_async_main_after_time(_:)`")
     }
 }
