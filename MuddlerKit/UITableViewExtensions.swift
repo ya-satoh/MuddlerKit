@@ -20,6 +20,7 @@ public extension UITableView {
             return
         }
         sizeToSystemLayoutFitView(view)
+        tableHeaderView = view
     }
 
     func sizeToFitFooterView() {
@@ -27,6 +28,7 @@ public extension UITableView {
             return
         }
         sizeToSystemLayoutFitView(view)
+        tableFooterView = view
     }
 
     private func sizeToSystemLayoutFitView(_ view: UIView) {
