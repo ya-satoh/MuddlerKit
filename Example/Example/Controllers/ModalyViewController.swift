@@ -40,10 +40,10 @@ class ModalyViewController: UIViewController {
 
     @IBAction func tapButton(_ sender: AnyObject) {
         let alert = UIAlertController.alertController(title: "UIAlertAction", message: "extend UIAlertAction")
-        alert.addAction(UIAlertAction.ok(handler: { (_) in
+        alert.addCancelAction()
+        alert.addOKAction { (_) in
             print("tapped OK")
-        }))
-        alert.addAction(UIAlertAction.cancel())
+        }
         self.present(alert, animated: true, completion: nil)
     }
 }
