@@ -9,7 +9,7 @@
 import UIKit
 import MuddlerKit
 
-final class SampleCell: UITableViewCell, ReusableView, PreferredScaleFit {
+final class SampleCell: UITableViewCell, ReusableView {
 
     @IBOutlet private(set) weak var label: UILabel!
 
@@ -23,10 +23,5 @@ final class SampleCell: UITableViewCell, ReusableView, PreferredScaleFit {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-
-    override func didMoveToSuperview() {
-        super.didMoveToSuperview()
-        adjustsPreferredScaleToFitWidth()
     }
 }
