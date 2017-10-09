@@ -17,8 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Log("Log test")
-        application.applicationIconBadgeNumberSafely(0)
+        application.mk.applicationIconBadgeNumberSafely(0)
         applicationWillRegisterForRemoteNotifications(application: application)
+        print("camelCased :", "camel case".mk.camelCased())
+        print("pascalCased :", "pascal case".mk.pascalCased())
+        print("randomAlphanumericString :", String.mk.randomAlphanumericString(8))
+        print("repeatedString :", String.mk.repeatedString(text: "r", length: 5, isNotEmpty: false))
         return true
     }
 
@@ -34,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-        application.applicationIconBadgeNumberSafely(0)
+        application.mk.applicationIconBadgeNumberSafely(0)
         applicationWillRegisterForRemoteNotifications(application: application)
     }
 
@@ -60,7 +64,7 @@ extension AppDelegate {
 
 extension AppDelegate {
     func applicationWillRegisterForRemoteNotifications(application: UIApplication) {
-        application.activateUserNotificationSettings()
+        application.mk.activateUserNotificationSettings()
     }
 
     func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {

@@ -22,12 +22,12 @@ final class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableView.deselectRow()
+        self.tableView.mk.deselectRow()
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        tableView.sizeToFitFooterView()
+        tableView.mk.sizeToFitFooterView()
     }
 
     override func didReceiveMemoryWarning() {

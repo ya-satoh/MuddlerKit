@@ -10,9 +10,9 @@ import Foundation
 
 // MARK: - deviceToken
 
-public extension String {
+extension String {
     // http://stackoverflow.com/a/24979960
-    init?(deviceToken: Data) {
+    public init?(deviceToken: Data) {
         let tokenChars = (deviceToken as NSData).bytes.bindMemory(to: CChar.self, capacity: deviceToken.count)
         var tokenString = ""
         (0..<deviceToken.count).indices.forEach { (i) in
@@ -20,24 +20,15 @@ public extension String {
         }
         self = tokenString
     }
-
-    /*
-    // http://stackoverflow.com/a/30017241
-    init?(deviceToken: NSData) {
-        let characterSet = NSCharacterSet(charactersInString: "<>")
-        self = (deviceToken.description as NSString)
-            .stringByTrimmingCharactersInSet(characterSet)
-            .stringByReplacingOccurrencesOfString(" ", withString: "") as String
-    }
-    */
 }
 
 
-public extension String {
+extension String: ExtensionCompatible {}
+extension Extension where Base == String {
     // https://github.com/omaralbeik/SwifterSwift/blob/master/Extensions/StringExtensions.swift
     // https://gist.github.com/stevenschobert/540dd33e828461916c11
-    func camelCased(_ startIsUpper: Bool = false) -> String {
-        let source = self
+    public func camelCased(_ startIsUpper: Bool = false) -> String {
+        let source = base
         if source.characters.contains(" ") {
             let first = source.substring(to: source.index(after: source.startIndex))
             let camel = source.capitalized.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\n", with: "")
@@ -50,12 +41,12 @@ public extension String {
         }
     }
 
-    func pascalCased() -> String {
+    public func pascalCased() -> String {
         return camelCased(true)
     }
 
     // http://uyama.coffee/wp/swift3xcode8でランダムな文字列を取得する/
-    static func randomAlphanumericString(_ length: Int) -> String {
+    public static func randomAlphanumericString(_ length: Int) -> String {
         let alphabet = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         let upperBound = UInt32(alphabet.characters.count)
         return String((0..<length).map { _ -> Character in
@@ -63,7 +54,7 @@ public extension String {
         })
     }
 
-    static func repeatedString(text: String, length: UInt32, isNotEmpty: Bool = true) -> String {
+    public static func repeatedString(text: String, length: UInt32, isNotEmpty: Bool = true) -> String {
         let random = arc4random_uniform(length) + (isNotEmpty ? 1 : 0)
         return (0..<random).reduce("") { (result, value) in
             var result = result

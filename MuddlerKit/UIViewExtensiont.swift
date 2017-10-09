@@ -8,12 +8,12 @@
 
 import UIKit
 
-public extension UIView {
+extension Extension where Base: UIView {
     // http://stackoverflow.com/a/36406508/226791
-    var firstResponder: UIResponder? {
-        if isFirstResponder { return self }
-        for subview in subviews {
-            if let responder = subview.firstResponder {
+    public var firstResponder: UIResponder? {
+        if base.isFirstResponder { return base }
+        for subview in base.subviews {
+            if let responder = subview.mk.firstResponder {
                 return responder
             }
         }
@@ -21,10 +21,10 @@ public extension UIView {
     }
 }
 
-public extension UIView {
-    func detectView<T: UIView>(_ type: T.Type) -> T? {
+extension Extension where Base: UIView {
+    public func detectView<T: UIView>(_ type: T.Type) -> T? {
         var target: T?
-        var view: UIView? = self
+        var view: UIView? = base
         while let parent = view?.superview {
             if let c = parent as? T {
                 target = c
@@ -35,7 +35,7 @@ public extension UIView {
         return target
     }
 
-    func detectTableViewCell() -> UITableViewCell? {
+    public func detectTableViewCell() -> UITableViewCell? {
         return detectView(UITableViewCell.self)
     }
 }

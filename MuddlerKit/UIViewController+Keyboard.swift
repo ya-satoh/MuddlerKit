@@ -17,7 +17,7 @@ private struct AssociatedKeys {
 
 // MARK: - UIViewController
 
-public extension UIViewController {
+extension UIViewController {
     private var keyboardObservableScrollViewContentInset: UIEdgeInsets {
         if let value = objc_getAssociatedObject(self, &AssociatedKeys.keyboardObservableScrollViewContentInset) as? NSValue {
             return value.uiEdgeInsetsValue
@@ -31,11 +31,11 @@ public extension UIViewController {
         }
     }
 
-    var keyboardObservableScrollView: UIScrollView {
+    public var keyboardObservableScrollView: UIScrollView {
         fatalError("Should override \(#function)")
     }
 
-    func addObserverForKeyboardNotifications() {
+    public func addObserverForKeyboardNotifications() {
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(keyboardWillShow(notification:)),
                        name: Notification.Name.UIKeyboardWillShow, object: nil)
@@ -51,7 +51,7 @@ public extension UIViewController {
                        name: Notification.Name.UIKeyboardDidChangeFrame, object: nil)
     }
 
-    func removeObserverForKeyboardNotifications() {
+    public func removeObserverForKeyboardNotifications() {
         let nc = NotificationCenter.default
         nc.removeObserver(self, name: Notification.Name.UIKeyboardWillShow, object: nil)
         nc.removeObserver(self, name: Notification.Name.UIKeyboardDidShow, object: nil)
@@ -61,7 +61,7 @@ public extension UIViewController {
         nc.removeObserver(self, name: Notification.Name.UIKeyboardDidChangeFrame, object: nil)
     }
 
-    func keyboardWillShow(notification: Notification) {
+    public func keyboardWillShow(notification: Notification) {
         if let userInfo = notification.userInfo {
             let window = UIApplication.shared.keyWindow
             let keyboardEndFrameInScreen = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
@@ -73,7 +73,7 @@ public extension UIViewController {
             insets.bottom = heightCoveredWithKeyboard
             keyboardObservableScrollView.scrollConsideredKeyboard(insets: insets, givenUserInfo: userInfo)
 
-            if let responder = keyboardObservableScrollView.firstResponder as? UIView {
+            if let responder = keyboardObservableScrollView.mk.firstResponder as? UIView {
                 let responderFrameInScrollView = responder.convert(responder.bounds,
                                                                    to: keyboardObservableScrollView)
                 let keyboardEndFrameInScrollView = view.convert(keyboardEndFrameInView, to: keyboardObservableScrollView)
@@ -84,28 +84,28 @@ public extension UIViewController {
         }
     }
 
-    func keyboardDidShow(notification: NSNotification) {
+    public func keyboardDidShow(notification: NSNotification) {
     }
 
-    func keyboardWillHide(notification: NSNotification) {
+    public func keyboardWillHide(notification: NSNotification) {
         let insets = keyboardObservableScrollViewContentInset
         keyboardObservableScrollView.scrollConsideredKeyboard(insets: insets, givenUserInfo: notification.userInfo)
     }
 
-    func keyboardDidHide(notification: NSNotification) {
+    public func keyboardDidHide(notification: NSNotification) {
     }
 
-    func keyboardWillChangeFrame(notification: NSNotification) {
+    public func keyboardWillChangeFrame(notification: NSNotification) {
     }
 
-    func keyboardDidChangeFrame(notification: NSNotification) {
+    public func keyboardDidChangeFrame(notification: NSNotification) {
     }
 }
 
 
 // MARK: - UIScrollView
 
-private extension UIScrollView {
+extension UIScrollView {
     func scrollConsideredKeyboard(insets:UIEdgeInsets, givenUserInfo userInfo: [AnyHashable : Any]?) {
         if let userInfo = userInfo {
             let duration: TimeInterval

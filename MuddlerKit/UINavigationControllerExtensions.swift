@@ -8,13 +8,13 @@
 
 import UIKit
 
-public extension UINavigationController {
-    override func peelViewController() {
+extension UINavigationController {
+    public override func peelViewController() {
         self.popToRootViewController(animated: false)
         self.visibleViewController?.peelViewController()
     }
 
-    override func setExclusiveTouchToBarButtonItems() {
+    public override func setExclusiveTouchToBarButtonItems() {
         self.navigationBar.subviews.forEach {
             if $0 is UIButton {
                 $0.isExclusiveTouch = true

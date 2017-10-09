@@ -8,27 +8,27 @@
 
 import UIKit
 
-public extension UITableView {
-    func deselectRow() {
-        if let indexPath = self.indexPathForSelectedRow {
-            self.deselectRow(at: indexPath, animated: true)
+extension Extension where Base: UITableView {
+    public func deselectRow() {
+        if let indexPath = base.indexPathForSelectedRow {
+            base.deselectRow(at: indexPath, animated: true)
         }
     }
 
-    func sizeToFitHeaderView() {
-        guard let view = tableHeaderView else {
+    public func sizeToFitHeaderView() {
+        guard let view = base.tableHeaderView else {
             return
         }
-        sizeToSystemLayoutFitView(view)
-        tableHeaderView = view
+        base.mk.sizeToSystemLayoutFitView(view)
+        base.tableHeaderView = view
     }
 
-    func sizeToFitFooterView() {
-        guard let view = tableFooterView else {
+    public func sizeToFitFooterView() {
+        guard let view = base.tableFooterView else {
             return
         }
-        sizeToSystemLayoutFitView(view)
-        tableFooterView = view
+        base.mk.sizeToSystemLayoutFitView(view)
+        base.tableFooterView = view
     }
 
     private func sizeToSystemLayoutFitView(_ view: UIView) {
