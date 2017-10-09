@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIViewController {
-    public func peelAllPresentedViewControllers() {
+    @objc public func peelAllPresentedViewControllers() {
         var presented = self.presentedViewController
         while presented?.presentedViewController != nil {
             presented = presented?.presentedViewController
@@ -17,14 +17,14 @@ extension UIViewController {
         presented?.peelViewController()
     }
 
-    public func peelViewController() {
+    @objc public func peelViewController() {
         let presenting = self.presentingViewController
         self.dismiss(animated: false) {
             presenting?.peelViewController()
         }
     }
 
-    public func setExclusiveTouchToBarButtonItems() {
+    @objc public func setExclusiveTouchToBarButtonItems() {
         var c: UIViewController? = self
         while c != nil && !(c is UINavigationController) {
             c = c?.parent
@@ -44,7 +44,7 @@ extension UIViewController {
     /// the view controller has two scrollView.
     ///
     /// - paramter scrollView: The ScrollView to adjust
-    public func manuallyAdjustsScrollViewInsetsAndOffset(_ scrollView: UIScrollView) {
+    @objc public func manuallyAdjustsScrollViewInsetsAndOffset(_ scrollView: UIScrollView) {
         guard automaticallyAdjustsScrollViewInsets else {
             return
         }

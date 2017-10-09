@@ -61,7 +61,7 @@ extension UIViewController {
         nc.removeObserver(self, name: Notification.Name.UIKeyboardDidChangeFrame, object: nil)
     }
 
-    public func keyboardWillShow(notification: Notification) {
+    @objc public func keyboardWillShow(notification: Notification) {
         if let userInfo = notification.userInfo {
             let window = UIApplication.shared.keyWindow
             let keyboardEndFrameInScreen = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
@@ -84,21 +84,21 @@ extension UIViewController {
         }
     }
 
-    public func keyboardDidShow(notification: NSNotification) {
+    @objc public func keyboardDidShow(notification: NSNotification) {
     }
 
-    public func keyboardWillHide(notification: NSNotification) {
+    @objc public func keyboardWillHide(notification: NSNotification) {
         let insets = keyboardObservableScrollViewContentInset
         keyboardObservableScrollView.scrollConsideredKeyboard(insets: insets, givenUserInfo: notification.userInfo)
     }
 
-    public func keyboardDidHide(notification: NSNotification) {
+    @objc public func keyboardDidHide(notification: NSNotification) {
     }
 
-    public func keyboardWillChangeFrame(notification: NSNotification) {
+    @objc public func keyboardWillChangeFrame(notification: NSNotification) {
     }
 
-    public func keyboardDidChangeFrame(notification: NSNotification) {
+    @objc public func keyboardDidChangeFrame(notification: NSNotification) {
     }
 }
 

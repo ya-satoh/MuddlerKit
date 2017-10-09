@@ -9,7 +9,7 @@
 import UIKit
 
 extension UITabBarController {
-    public override func peelViewController() {
+    @objc public override func peelViewController() {
         if let cs = self.viewControllers {
             for c in cs {
                 if c == self.selectedViewController {

@@ -28,14 +28,15 @@ extension Extension where Base == String {
     // https://github.com/omaralbeik/SwifterSwift/blob/master/Extensions/StringExtensions.swift
     // https://gist.github.com/stevenschobert/540dd33e828461916c11
     public func camelCased(_ startIsUpper: Bool = false) -> String {
+        guard !base.isEmpty else { return base }
         let source = base
         if source.characters.contains(" ") {
-            let first = source.substring(to: source.index(after: source.startIndex))
+            let first = String(source.prefix(upTo: source.index(source.startIndex, offsetBy: 1)))
             let camel = source.capitalized.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\n", with: "")
             let rest = String(camel.characters.dropFirst())
             return "\(startIsUpper ? first.uppercased() : first)\(rest)"
         } else {
-            let first = source.lowercased().substring(to: source.index(after: source.startIndex))
+            let first = String(source.lowercased().prefix(upTo: source.index(source.startIndex, offsetBy: 1)))
             let rest = String(source.characters.dropFirst())
             return "\(startIsUpper ? first.uppercased() : first)\(rest)"
         }
