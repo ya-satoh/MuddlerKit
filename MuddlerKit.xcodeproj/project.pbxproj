@@ -24,7 +24,7 @@
 		0EC995841C31301D0035291D /* UITabBarControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995831C31301D0035291D /* UITabBarControllerExtensions.swift */; };
 		0ED0B6A81E14FA1100BE2D48 /* UIViewExtensiont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B6A71E14FA1100BE2D48 /* UIViewExtensiont.swift */; };
 		0ED0B6AB1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B6AA1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift */; };
-		0ED0B6AE1E15021F00BE2D48 /* CoreExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B6AD1E15021F00BE2D48 /* CoreExtensions.swift */; };
+		0ED30A3D1EE45B8100981AEE /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED30A3C1EE45B8100981AEE /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 		0EC995831C31301D0035291D /* UITabBarControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabBarControllerExtensions.swift; sourceTree = "<group>"; };
 		0ED0B6A71E14FA1100BE2D48 /* UIViewExtensiont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensiont.swift; sourceTree = "<group>"; };
 		0ED0B6AA1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
-		0ED0B6AD1E15021F00BE2D48 /* CoreExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreExtensions.swift; sourceTree = "<group>"; };
+		0ED30A3C1EE45B8100981AEE /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +142,7 @@
 			children = (
 				0EC9957A1C312D7B0035291D /* StringExtensions.swift */,
 				0EC9957D1C312E070035291D /* NSHTTPCookieStorageExtensions.swift */,
-				0ED0B6AD1E15021F00BE2D48 /* CoreExtensions.swift */,
+				0ED30A3C1EE45B8100981AEE /* Extension.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -257,13 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ED0B6AE1E15021F00BE2D48 /* CoreExtensions.swift in Sources */,
 				0ED0B6A81E14FA1100BE2D48 /* UIViewExtensiont.swift in Sources */,
 				0EC995801C312FC30035291D /* UIViewControllerExtensions.swift in Sources */,
 				0EC9957B1C312D7B0035291D /* StringExtensions.swift in Sources */,
 				0ED0B6AB1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift in Sources */,
 				0EC9957E1C312E070035291D /* NSHTTPCookieStorageExtensions.swift in Sources */,
 				0EC995841C31301D0035291D /* UITabBarControllerExtensions.swift in Sources */,
+				0ED30A3D1EE45B8100981AEE /* Extension.swift in Sources */,
 				0EC995701C3128650035291D /* UICollectionViewExtensions.swift in Sources */,
 				0E2E99C31DEBB84500CC6EAE /* Reusable.swift in Sources */,
 				0EC995821C312FF70035291D /* UINavigationControllerExtensions.swift in Sources */,

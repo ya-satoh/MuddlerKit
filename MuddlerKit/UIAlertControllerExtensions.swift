@@ -11,16 +11,16 @@ import UIKit
 //
 // MARK: - UIAlertController
 //
-public extension UIAlertController {
-    class func alertController(title: String? = nil, message: String?) -> Self {
+extension UIAlertController {
+    public class func alertController(title: String? = nil, message: String?) -> Self {
         return self.init(title: title ?? "", message: message, preferredStyle: .alert)
     }
 
-    func addOKAction(handler: ((UIAlertAction) -> Void)? = nil) {
+    public func addOKAction(handler: ((UIAlertAction) -> Void)? = nil) {
         addAction(UIAlertAction.ok(handler: handler))
     }
 
-    func addCancelAction(handler: ((UIAlertAction) -> Void)? = nil) {
+    public func addCancelAction(handler: ((UIAlertAction) -> Void)? = nil) {
         addAction(UIAlertAction.cancel(handler: handler))
     }
 }
@@ -69,7 +69,7 @@ extension UIAlertController {
 //
 // MARK: - UIAlertAction
 //
-public extension UIAlertAction {
+extension UIAlertAction {
     class func ok(handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
         return UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .default, handler: handler)
     }

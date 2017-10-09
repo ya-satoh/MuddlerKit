@@ -14,16 +14,16 @@ public protocol NibLoadable: AnyObject {
     func loadFromNib()
 }
 
-public extension NibLoadable {
-    func nibName() -> String {
+extension NibLoadable {
+    public func nibName() -> String {
         return String(describing: type(of: self))
     }
 
-    func bundle() -> Bundle {
+    public func bundle() -> Bundle {
         return Bundle(for: type(of: self))
     }
 
-    func loadFromNib() {
+    public func loadFromNib() {
         let nib = UINib(nibName: nibName(), bundle: bundle())
         nib.instantiate(withOwner: self, options: nil)
     }
@@ -41,8 +41,8 @@ public protocol NibLoadableView: NibLoadable {
     func loadContentViewFromNib()
 }
 
-public extension NibLoadableView where Self: UIView {
-    func loadContentViewFromNib() {
+extension NibLoadableView where Self: UIView {
+    public func loadContentViewFromNib() {
         loadFromNib()
 
         contentView.backgroundColor = UIColor.clear
