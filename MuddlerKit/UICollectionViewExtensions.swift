@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UICollectionView {
-    public func deselectRow() {
+public extension UICollectionView {
+    func deselectRow() {
         if let indexPaths = self.indexPathsForSelectedItems {
             indexPaths.forEach { [weak self] (indexPath) -> Void in
                 self?.deselectItem(at: indexPath, animated: true)

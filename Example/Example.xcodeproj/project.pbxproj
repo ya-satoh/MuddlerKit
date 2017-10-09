@@ -7,27 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E119BC91E0E0E68004818B5 /* SampleLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E119BC81E0E0E68004818B5 /* SampleLoadableView.swift */; };
+		0E119BCC1E0E0E75004818B5 /* SampleLoadableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E119BCB1E0E0E75004818B5 /* SampleLoadableView.xib */; };
+		0E8F75E71E0E0A3A00D027AB /* MuddlerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8F75DD1E0E09FE00D027AB /* MuddlerKit.framework */; };
+		0E8F75E81E0E0A3A00D027AB /* MuddlerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8F75DD1E0E09FE00D027AB /* MuddlerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E8F75EE1E0E0C2C00D027AB /* SampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F75EC1E0E0C2C00D027AB /* SampleCell.swift */; };
+		0E8F75EF1E0E0C2C00D027AB /* SampleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F75ED1E0E0C2C00D027AB /* SampleCell.xib */; };
 		0EC995571C31235E0035291D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995561C31235E0035291D /* AppDelegate.swift */; };
-		0EC995591C31235E0035291D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995581C31235E0035291D /* ViewController.swift */; };
 		0EC9955C1C31235E0035291D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC9955A1C31235E0035291D /* Main.storyboard */; };
 		0EC9955E1C31235E0035291D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC9955D1C31235E0035291D /* Assets.xcassets */; };
 		0EC995611C31235E0035291D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC9955F1C31235E0035291D /* LaunchScreen.storyboard */; };
-		0EC995691C3124FE0035291D /* MuddlerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC995681C3124FE0035291D /* MuddlerKit.framework */; };
 		0EC995731C3129E00035291D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995721C3129E00035291D /* Log.swift */; };
-		0EC995881C3133A10035291D /* ModalyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995871C3133A10035291D /* ModalyViewController.swift */; };
+		0ED0B69E1E14F18B00BE2D48 /* MultipleTablesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B69C1E14F18B00BE2D48 /* MultipleTablesController.swift */; };
+		0ED0B69F1E14F18B00BE2D48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B69D1E14F18B00BE2D48 /* ViewController.swift */; };
+		0ED0B6A11E14F1DF00BE2D48 /* ModalyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B6A01E14F1DF00BE2D48 /* ModalyViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0E8F75DC1E0E09FE00D027AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E8F75D71E0E09FE00D027AB /* MuddlerKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EC9950B1C311D2E0035291D;
+			remoteInfo = MuddlerKit;
+		};
+		0E8F75DE1E0E09FE00D027AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E8F75D71E0E09FE00D027AB /* MuddlerKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EC995151C311D2F0035291D;
+			remoteInfo = MuddlerKitTests;
+		};
+		0E8F75E91E0E0A3A00D027AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E8F75D71E0E09FE00D027AB /* MuddlerKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EC9950A1C311D2E0035291D;
+			remoteInfo = MuddlerKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0E8F75EB1E0E0A3A00D027AB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0E8F75E81E0E0A3A00D027AB /* MuddlerKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0E119BC81E0E0E68004818B5 /* SampleLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleLoadableView.swift; path = Views/SampleLoadableView.swift; sourceTree = "<group>"; };
+		0E119BCB1E0E0E75004818B5 /* SampleLoadableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SampleLoadableView.xib; path = Views/SampleLoadableView.xib; sourceTree = "<group>"; };
+		0E8F75D71E0E09FE00D027AB /* MuddlerKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MuddlerKit.xcodeproj; path = ../MuddlerKit.xcodeproj; sourceTree = "<group>"; };
+		0E8F75EC1E0E0C2C00D027AB /* SampleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleCell.swift; path = Views/SampleCell.swift; sourceTree = "<group>"; };
+		0E8F75ED1E0E0C2C00D027AB /* SampleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SampleCell.xib; path = Views/SampleCell.xib; sourceTree = "<group>"; };
 		0EC995531C31235E0035291D /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC995561C31235E0035291D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0EC995581C31235E0035291D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0EC9955B1C31235E0035291D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EC9955D1C31235E0035291D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EC995601C31235E0035291D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EC995621C31235E0035291D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0EC995681C3124FE0035291D /* MuddlerKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MuddlerKit.framework; path = Carthage/Build/iOS/MuddlerKit.framework; sourceTree = "<group>"; };
 		0EC995721C3129E00035291D /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		0EC995871C3133A10035291D /* ModalyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalyViewController.swift; sourceTree = "<group>"; };
+		0ED0B69C1E14F18B00BE2D48 /* MultipleTablesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleTablesController.swift; sourceTree = "<group>"; };
+		0ED0B69D1E14F18B00BE2D48 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0ED0B6A01E14F1DF00BE2D48 /* ModalyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,19 +84,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EC995691C3124FE0035291D /* MuddlerKit.framework in Frameworks */,
+				0E8F75E71E0E0A3A00D027AB /* MuddlerKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E8F75D81E0E09FE00D027AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E8F75DD1E0E09FE00D027AB /* MuddlerKit.framework */,
+				0E8F75DF1E0E09FE00D027AB /* MuddlerKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E8F75F01E0E0C4600D027AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E8F75EC1E0E0C2C00D027AB /* SampleCell.swift */,
+				0E8F75ED1E0E0C2C00D027AB /* SampleCell.xib */,
+				0E119BC81E0E0E68004818B5 /* SampleLoadableView.swift */,
+				0E119BCB1E0E0E75004818B5 /* SampleLoadableView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		0EC9954A1C31235E0035291D = {
 			isa = PBXGroup;
 			children = (
-				0EC995681C3124FE0035291D /* MuddlerKit.framework */,
 				0EC995551C31235E0035291D /* Example */,
 				0EC995541C31235E0035291D /* Products */,
+				0E8F75D71E0E09FE00D027AB /* MuddlerKit.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,14 +133,24 @@
 			children = (
 				0EC995721C3129E00035291D /* Log.swift */,
 				0EC995561C31235E0035291D /* AppDelegate.swift */,
-				0EC995581C31235E0035291D /* ViewController.swift */,
-				0EC995871C3133A10035291D /* ModalyViewController.swift */,
 				0EC9955A1C31235E0035291D /* Main.storyboard */,
 				0EC9955D1C31235E0035291D /* Assets.xcassets */,
 				0EC9955F1C31235E0035291D /* LaunchScreen.storyboard */,
 				0EC995621C31235E0035291D /* Info.plist */,
+				0ED0B69B1E14F15400BE2D48 /* Controllers */,
+				0E8F75F01E0E0C4600D027AB /* Views */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		0ED0B69B1E14F15400BE2D48 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0ED0B69D1E14F18B00BE2D48 /* ViewController.swift */,
+				0ED0B6A01E14F1DF00BE2D48 /* ModalyViewController.swift */,
+				0ED0B69C1E14F18B00BE2D48 /* MultipleTablesController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,11 +163,12 @@
 				0EC9954F1C31235E0035291D /* Sources */,
 				0EC995501C31235E0035291D /* Frameworks */,
 				0EC995511C31235E0035291D /* Resources */,
-				0EC9956A1C3125160035291D /* ShellScript */,
+				0E8F75EB1E0E0A3A00D027AB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0E8F75EA1E0E0A3A00D027AB /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -122,6 +202,12 @@
 			mainGroup = 0EC9954A1C31235E0035291D;
 			productRefGroup = 0EC995541C31235E0035291D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0E8F75D81E0E09FE00D027AB /* Products */;
+					ProjectRef = 0E8F75D71E0E09FE00D027AB /* MuddlerKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0EC995521C31235E0035291D /* Example */,
@@ -129,49 +215,62 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		0E8F75DD1E0E09FE00D027AB /* MuddlerKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MuddlerKit.framework;
+			remoteRef = 0E8F75DC1E0E09FE00D027AB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0E8F75DF1E0E09FE00D027AB /* MuddlerKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MuddlerKitTests.xctest;
+			remoteRef = 0E8F75DE1E0E09FE00D027AB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		0EC995511C31235E0035291D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0EC995611C31235E0035291D /* LaunchScreen.storyboard in Resources */,
+				0E8F75EF1E0E0C2C00D027AB /* SampleCell.xib in Resources */,
 				0EC9955E1C31235E0035291D /* Assets.xcassets in Resources */,
+				0E119BCC1E0E0E75004818B5 /* SampleLoadableView.xib in Resources */,
 				0EC9955C1C31235E0035291D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0EC9956A1C3125160035291D /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/MuddlerKit.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		0EC9954F1C31235E0035291D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EC995591C31235E0035291D /* ViewController.swift in Sources */,
+				0ED0B69F1E14F18B00BE2D48 /* ViewController.swift in Sources */,
 				0EC995571C31235E0035291D /* AppDelegate.swift in Sources */,
-				0EC995881C3133A10035291D /* ModalyViewController.swift in Sources */,
+				0ED0B69E1E14F18B00BE2D48 /* MultipleTablesController.swift in Sources */,
+				0E8F75EE1E0E0C2C00D027AB /* SampleCell.swift in Sources */,
+				0E119BC91E0E0E68004818B5 /* SampleLoadableView.swift in Sources */,
 				0EC995731C3129E00035291D /* Log.swift in Sources */,
+				0ED0B6A11E14F1DF00BE2D48 /* ModalyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E8F75EA1E0E0A3A00D027AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MuddlerKit;
+			targetProxy = 0E8F75E91E0E0A3A00D027AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0EC9955A1C31235E0035291D /* Main.storyboard */ = {
@@ -277,11 +376,9 @@
 		0EC995661C31235E0035291D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
@@ -294,11 +391,9 @@
 		0EC995671C31235E0035291D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-DDEBUG";

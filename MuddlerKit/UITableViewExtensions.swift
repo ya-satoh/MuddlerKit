@@ -8,10 +8,35 @@
 
 import UIKit
 
-extension UITableView {
-    public func deselectRow() {
+public extension UITableView {
+    func deselectRow() {
         if let indexPath = self.indexPathForSelectedRow {
             self.deselectRow(at: indexPath, animated: true)
         }
+    }
+
+    func sizeToFitHeaderView() {
+        guard let view = tableHeaderView else {
+            return
+        }
+        sizeToSystemLayoutFitView(view)
+        tableHeaderView = view
+    }
+
+    func sizeToFitFooterView() {
+        guard let view = tableFooterView else {
+            return
+        }
+        sizeToSystemLayoutFitView(view)
+        tableFooterView = view
+    }
+
+    private func sizeToSystemLayoutFitView(_ view: UIView) {
+        view.setNeedsLayout()
+        view.layoutIfNeeded()
+        let size = view.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+        var frame = view.frame
+        frame.size.height = size.height
+        view.frame = frame
     }
 }

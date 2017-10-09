@@ -8,40 +8,45 @@
 
 import Foundation
 
+//
+// MARK: - archive & unarchive
+//
 extension HTTPCookieStorage {
     public func archivedData() -> Data? {
         guard let cookies = self.cookies else { return nil }
         return NSKeyedArchiver.archivedData(withRootObject: cookies)
     }
 
-    public func unarchiveWithData(_ data: Data?) {
-        guard let d = data else { return }
-        guard let cookies = NSKeyedUnarchiver.unarchiveObject(with: d) as? [HTTPCookie] else {
+    public func unarchive(data: Data) {
+        guard let cookies = NSKeyedUnarchiver.unarchiveObject(with: data) as? [HTTPCookie] else {
             return
         }
         cookies.forEach { setCookie($0) }
     }
+}
 
+//
+// MARK: - clear
+//
+extension HTTPCookieStorage {
     public func clearAll() {
         guard let cookies = self.cookies else { return }
-        clear(cookies)
-    }
-
-    func clearForURL(_ url: URL) {
-        guard let cookies = self.cookies(for: url) else { return }
-        clear(cookies)
-    }
-
-    public func clear(_ cookies: [HTTPCookie]) {
         for cookie in cookies {
-            clean(cookie)
+            clearCookie(cookie)
         }
     }
 
-    /*
-     * http://mmasashi.hatenablog.com/entry/20101202/1292763345
-     */
-    public func clean(_ cookie: HTTPCookie) {
+    public func clear(forURL url: URL) {
+        guard let cookies = self.cookies(for: url) else { return }
+        for cookie in cookies {
+            clearCookie(cookie)
+        }
+    }
+
+    ///
+    /// http://mmasashi.hatenablog.com/entry/20101202/1292763345
+    ///
+    public func clearCookie(_ cookie: HTTPCookie) {
         guard var property = cookie.properties else {
             deleteCookie(cookie)
             return
@@ -52,53 +57,90 @@ extension HTTPCookieStorage {
             setCookie(newCookie)
         }
     }
-
-    public class func archivedData() -> Data? {
-        return shared.archivedData()
-    }
-
-    public class func unarchiveWithData(_ data: Data?) {
-        shared.unarchiveWithData(data)
-    }
-
-    public class func clearAll() {
-        shared.clearAll()
-    }
-
-    public class func clearForURL(_ url: URL) {
-        shared.clearForURL(url)
-    }
-
-    public class func clear(_ cookies: [HTTPCookie]) {
-        shared.clear(cookies)
-    }
-
-    public class func clean(_ cookie: HTTPCookie) {
-        shared.clean(cookie)
-    }
 }
 
 //
-// MARK: - NSUserDefaults
+// MARK: - unavailable
 //
 extension HTTPCookieStorage {
+
+    // instance methods
+
+    @nonobjc
+    @available(*, unavailable, renamed: "clear(forURL:)")
+    public func clearForURL(_ url: URL) {
+        fatalError()
+    }
+
+    @available(*, unavailable)
+    public func clear(_ cookies: [HTTPCookie]) {
+        fatalError()
+    }
+
+    @available(*, unavailable)
+    public func clean(_ cookie: HTTPCookie) {
+        fatalError()
+    }
+
+    // class methods
+
+    @available(*, unavailable)
+    public class func archivedData() -> Data? {
+        fatalError()
+    }
+
+    @available(*, unavailable)
+    public class func unarchiveWithData(_ data: Data?) {
+        fatalError()
+    }
+
+    @available(*, unavailable)
+    public class func clearAll() {
+        fatalError()
+    }
+
+    @available(*, unavailable)
+    public class func clearForURL(_ url: URL) {
+        fatalError()
+    }
+
+    @available(*, unavailable)
+    public class func clear(_ cookies: [HTTPCookie]) {
+        fatalError()
+    }
+
+    @available(*, unavailable)
+    public class func clean(_ cookie: HTTPCookie) {
+        fatalError()
+    }
+
+    // archive & unarchive
+
+    @nonobjc
+    @available(*, unavailable, renamed: "unarchive(data:)")
+    public func unarchiveWithData(_ data: Data?) {
+        fatalError()
+    }
+
+    // UserDefaults
+
+    @available(*, unavailable)
     public func saveToUserDefaultsForKey(_ key: String) -> Bool {
-        let ud = UserDefaults.standard
-        ud.set(archivedData(), forKey: key)
-        return ud.synchronize()
+        fatalError()
     }
 
+    @available(*, unavailable)
     public func loadFromUserDefaultsForKey(_ key: String) {
-        let ud = UserDefaults.standard
-        guard let data = ud.data(forKey: key) else { return }
-        unarchiveWithData(data)
+        fatalError()
     }
 
+    @available(*, unavailable)
     public class func saveToUserDefaultsForKey(_ key: String) -> Bool {
-        return shared.saveToUserDefaultsForKey(key)
+        fatalError()
     }
 
+    @available(*, unavailable)
     public class func loadFromUserDefaultsForKey(_ key: String) {
-        shared.loadFromUserDefaultsForKey(key)
+        fatalError()
     }
 }

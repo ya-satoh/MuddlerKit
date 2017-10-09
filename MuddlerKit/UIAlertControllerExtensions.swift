@@ -8,17 +8,31 @@
 
 import UIKit
 
-extension UIAlertController {
-    public class func alertController(title: String? = nil, message: String?) -> Self {
+//
+// MARK: - UIAlertController
+//
+public extension UIAlertController {
+    class func alertController(title: String? = nil, message: String?) -> Self {
         return self.init(title: title ?? "", message: message, preferredStyle: .alert)
+    }
+
+    func addOKAction(handler: ((UIAlertAction) -> Void)? = nil) {
+        addAction(UIAlertAction.ok(handler: handler))
+    }
+
+    func addCancelAction(handler: ((UIAlertAction) -> Void)? = nil) {
+        addAction(UIAlertAction.cancel(handler: handler))
     }
 }
 
+
+
+/// present based on the window
+/// http://stackoverflow.com/a/30941356
+///
+
 private var UIAlertControllerWindowKey: UInt8 = 0
 
-//
-// http://stackoverflow.com/a/30941356
-//
 extension UIAlertController {
     fileprivate var alertWindow: UIWindow? {
         get {
@@ -48,5 +62,19 @@ extension UIAlertController {
         self.alertWindow = window
 
         controller.present(self, animated: animated, completion: completion)
+    }
+}
+
+
+//
+// MARK: - UIAlertAction
+//
+public extension UIAlertAction {
+    class func ok(handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
+        return UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .default, handler: handler)
+    }
+
+    class func cancel(handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
+        return UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel"), style: .cancel, handler: handler)
     }
 }

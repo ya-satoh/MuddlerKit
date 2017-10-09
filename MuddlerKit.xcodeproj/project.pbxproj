@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E2E99BF1DEBB75800CC6EAE /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E99BE1DEBB75800CC6EAE /* NibLoadable.swift */; };
+		0E2E99C31DEBB84500CC6EAE /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E99C21DEBB84500CC6EAE /* Reusable.swift */; };
 		0EC9950F1C311D2E0035291D /* MuddlerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EC9950E1C311D2E0035291D /* MuddlerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EC995161C311D2F0035291D /* MuddlerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC9950B1C311D2E0035291D /* MuddlerKit.framework */; };
 		0EC9951B1C311D2F0035291D /* MuddlerKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9951A1C311D2F0035291D /* MuddlerKitTests.swift */; };
@@ -20,7 +22,9 @@
 		0EC995801C312FC30035291D /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9957F1C312FC30035291D /* UIViewControllerExtensions.swift */; };
 		0EC995821C312FF70035291D /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995811C312FF70035291D /* UINavigationControllerExtensions.swift */; };
 		0EC995841C31301D0035291D /* UITabBarControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995831C31301D0035291D /* UITabBarControllerExtensions.swift */; };
-		0EC9958A1C313BBD0035291D /* DispatchExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC995891C313BBD0035291D /* DispatchExtensions.swift */; };
+		0ED0B6A81E14FA1100BE2D48 /* UIViewExtensiont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B6A71E14FA1100BE2D48 /* UIViewExtensiont.swift */; };
+		0ED0B6AB1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B6AA1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift */; };
+		0ED0B6AE1E15021F00BE2D48 /* CoreExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0B6AD1E15021F00BE2D48 /* CoreExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E2E99BE1DEBB75800CC6EAE /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		0E2E99C21DEBB84500CC6EAE /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		0EC9950B1C311D2E0035291D /* MuddlerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MuddlerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC9950E1C311D2E0035291D /* MuddlerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuddlerKit.h; sourceTree = "<group>"; };
 		0EC995101C311D2E0035291D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,7 +56,9 @@
 		0EC9957F1C312FC30035291D /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0EC995811C312FF70035291D /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
 		0EC995831C31301D0035291D /* UITabBarControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabBarControllerExtensions.swift; sourceTree = "<group>"; };
-		0EC995891C313BBD0035291D /* DispatchExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchExtensions.swift; sourceTree = "<group>"; };
+		0ED0B6A71E14FA1100BE2D48 /* UIViewExtensiont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensiont.swift; sourceTree = "<group>"; };
+		0ED0B6AA1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
+		0ED0B6AD1E15021F00BE2D48 /* CoreExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +105,6 @@
 				0EC995101C311D2E0035291D /* Info.plist */,
 				0EC995711C31287A0035291D /* UIKit */,
 				0EC9957C1C312D840035291D /* Foundation */,
-				0EC995891C313BBD0035291D /* DispatchExtensions.swift */,
 			);
 			path = MuddlerKit;
 			sourceTree = "<group>";
@@ -114,14 +121,18 @@
 		0EC995711C31287A0035291D /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				0ED0B6A71E14FA1100BE2D48 /* UIViewExtensiont.swift */,
 				0EC9956D1C3128300035291D /* UITableViewExtensions.swift */,
 				0EC9956F1C3128650035291D /* UICollectionViewExtensions.swift */,
 				0EC995741C312BAD0035291D /* UIWebViewExtensions.swift */,
 				0EC995761C312C0B0035291D /* UIApplicationExtensions.swift */,
 				0EC995781C312CD20035291D /* UIAlertControllerExtensions.swift */,
 				0EC9957F1C312FC30035291D /* UIViewControllerExtensions.swift */,
+				0ED0B6AA1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift */,
 				0EC995811C312FF70035291D /* UINavigationControllerExtensions.swift */,
 				0EC995831C31301D0035291D /* UITabBarControllerExtensions.swift */,
+				0E2E99BE1DEBB75800CC6EAE /* NibLoadable.swift */,
+				0E2E99C21DEBB84500CC6EAE /* Reusable.swift */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -131,6 +142,7 @@
 			children = (
 				0EC9957A1C312D7B0035291D /* StringExtensions.swift */,
 				0EC9957D1C312E070035291D /* NSHTTPCookieStorageExtensions.swift */,
+				0ED0B6AD1E15021F00BE2D48 /* CoreExtensions.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -245,15 +257,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED0B6AE1E15021F00BE2D48 /* CoreExtensions.swift in Sources */,
+				0ED0B6A81E14FA1100BE2D48 /* UIViewExtensiont.swift in Sources */,
 				0EC995801C312FC30035291D /* UIViewControllerExtensions.swift in Sources */,
 				0EC9957B1C312D7B0035291D /* StringExtensions.swift in Sources */,
-				0EC9958A1C313BBD0035291D /* DispatchExtensions.swift in Sources */,
+				0ED0B6AB1E14FF0F00BE2D48 /* UIViewController+Keyboard.swift in Sources */,
 				0EC9957E1C312E070035291D /* NSHTTPCookieStorageExtensions.swift in Sources */,
 				0EC995841C31301D0035291D /* UITabBarControllerExtensions.swift in Sources */,
 				0EC995701C3128650035291D /* UICollectionViewExtensions.swift in Sources */,
+				0E2E99C31DEBB84500CC6EAE /* Reusable.swift in Sources */,
 				0EC995821C312FF70035291D /* UINavigationControllerExtensions.swift in Sources */,
 				0EC9956E1C3128300035291D /* UITableViewExtensions.swift in Sources */,
 				0EC995791C312CD20035291D /* UIAlertControllerExtensions.swift in Sources */,
+				0E2E99BF1DEBB75800CC6EAE /* NibLoadable.swift in Sources */,
 				0EC995771C312C0B0035291D /* UIApplicationExtensions.swift in Sources */,
 				0EC995751C312BAD0035291D /* UIWebViewExtensions.swift in Sources */,
 			);
