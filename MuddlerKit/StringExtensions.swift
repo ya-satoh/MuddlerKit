@@ -30,14 +30,14 @@ extension Extension where Base == String {
     public func camelCased(_ startIsUpper: Bool = false) -> String {
         guard !base.isEmpty else { return base }
         let source = base
-        if source.characters.contains(" ") {
+        if source.contains(" ") {
             let first = String(source.prefix(upTo: source.index(source.startIndex, offsetBy: 1)))
             let camel = source.capitalized.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\n", with: "")
-            let rest = String(camel.characters.dropFirst())
+            let rest = String(camel.dropFirst())
             return "\(startIsUpper ? first.uppercased() : first)\(rest)"
         } else {
             let first = String(source.lowercased().prefix(upTo: source.index(source.startIndex, offsetBy: 1)))
-            let rest = String(source.characters.dropFirst())
+            let rest = String(source.dropFirst())
             return "\(startIsUpper ? first.uppercased() : first)\(rest)"
         }
     }
@@ -49,7 +49,7 @@ extension Extension where Base == String {
     // http://uyama.coffee/wp/swift3xcode8でランダムな文字列を取得する/
     public static func randomAlphanumericString(_ length: Int) -> String {
         let alphabet = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        let upperBound = UInt32(alphabet.characters.count)
+        let upperBound = UInt32(alphabet.count)
         return String((0..<length).map { _ -> Character in
             return alphabet[alphabet.index(alphabet.startIndex, offsetBy: Int(arc4random_uniform(upperBound)))]
         })
